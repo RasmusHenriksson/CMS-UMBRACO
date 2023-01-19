@@ -1,0 +1,31 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Extensions
+
+@inject IPublishedValueFallback PublishedValueFallback
+@inject IPublishedUrlProvider PublishedUrlProvider
+
+
+@{ 
+    var site = Model.Root();
+    var selection = site.Children.Where(x => x.IsVisible(PublishedValueFallback)).OrderByDescending(x => x.CreateDate).ToArray(); 
+}
+
+
+
+ <nav class="navbar container">
+            <div class="Fixxo-logo">
+                Fixxo.
+            </div>
+            <div class="navbar-links">
+                <a class="active" href="index.html">Home</a>
+                <a href="contact.html">Contacts</a>
+            </div>
+            <div class="navbar-icon-links">
+                <a href="#"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-theme">3</span><i class="fa-regular fa-bag-shopping"></i></a>
+            </div>
+        </nav>
+
+
