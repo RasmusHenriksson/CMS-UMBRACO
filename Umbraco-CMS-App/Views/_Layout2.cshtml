@@ -2,6 +2,7 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
 	Layout = null;
+	ViewData["Title"] = @Model.Value("contactTitle");
 }
 
 
@@ -18,11 +19,12 @@
     <title>@ViewData["Title"] - UMBRACO</title>
 </head>
 <body>
-    <partial name="testnav" />
+    <partial name="Navbar" />
 
     @RenderBody()
 
     <partial name="footer" />
+    
     <script src="/scripts/script.js"></script>
 </body>
 </html>

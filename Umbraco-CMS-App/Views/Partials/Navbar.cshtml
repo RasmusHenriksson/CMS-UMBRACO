@@ -6,34 +6,35 @@
 
 @inject IPublishedValueFallback PublishedValueFallback
 @inject IPublishedUrlProvider PublishedUrlProvider
-@*
-    This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
-    This is the home page for a standard website.
-    It also highlights the current active page/section in the navigation with the CSS class "current".
-*@
 
-@{ var selection = Model.Root().Children.Where(x => x.IsVisible(PublishedValueFallback)).ToArray(); }
 
-@if (selection?.Length > 0)
-{
-  
-        @foreach (var item in selection)
-        {
-            <li class="nav-item"><a class="nav-link" @(item.IsAncestorOrSelf(Model) ? "active" : null) | href="@item.Url(PublishedUrlProvider)">@item.Name</a></li>
-        }
-  
-     <header>
-        <nav class="navbar container">
-            <div class="Fixxo-logo">
-            Fixxo.
-            </div>
-                <div class="navbar-links">
-                <a class="active" href="index.html">Home</a>
-                <a href="contact.html">Contacts</a>
-                </div>
-                    <div class="navbar-icon-links">           
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-regular fa-shopping-bag"></i></a></li>
-                    </div>
-        </nav>
-    </header>
+@{ 
+    var site = Model.Root();
+    var selection = site.Children.Where(x => x.IsVisible(PublishedValueFallback)).OrderByDescending(x => x.CreateDate).ToArray(); 
 }
+
+
+
+<nav class="navbar container">
+    <div class="Fixxo-logo" href="@site.Url()">Fixxo.</div>
+        <ul class="navbar-nav">
+        
+            <div class="navbar-flex">
+            <li class="nav-item"><a class="nav-link @(Model.Id == site.Id ? "active" : null)" href="@site.Url()">@site.Name</a></li>
+            @if (selection?.Length > 0)
+            {
+            
+            @foreach (var item in selection)
+            {
+            <li class="nav-item"><a class="nav-link @(item.IsAncestorOrSelf(Model) ? "active" : null)" href="@item.Url(PublishedUrlProvider)">@item.Name</a></li>
+            }
+            
+            }
+            
+        </ul>
+            </div>
+                <div class="navbar-icon-links">
+                    <a href="#"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-theme">3</span><i class="fa-regular fa-bag-shopping"></i></a>
+                </div>
+</nav>
+

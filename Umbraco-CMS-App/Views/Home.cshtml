@@ -2,229 +2,25 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-    ViewData["PageTitle"] = @Model.Value("pageTitle");
-    ViewData["PageDescription"] =@Model.Value("pageDescription");
+    
     Layout = "_Layout.cshtml";
 }
 
 
-<section class="my-products">
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="product-img">
-                    <div class="img">
-                        <img src="" alt="">
-                        <div class="product-menu">
-                            <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
-                        </div>
-                        <a class="btn-theme btn-product-theme" id="quick-view" href="#">
-                            QUICK VIEW
-                        </a>
-                    </div>
-
-                    <div class="product-body">
-                        <p class="product-category">Category</p>
-                        <h5 class="product-title">Modern Black Blouse</h5>
-                        <p class="product-rating">
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                        </p>
-                        <p class="product-price">$35.00</p>
-                    </div>
-                </div>
+<header class="umbraco-background">
+        <section class="middle container">
+            <img src="/images/img-2.svg" class="image-left" alt="middle-img-1">
+            <div class="middle-body">
+                <h1>@Model.Value("SaleUpTo")</h1>
+                <h1>@Model.Value("PercentageSale")</h1>
+                <p>@Model.Value("SalesDescription")</p>
+                <a class="Umbraco-btn" href="#">
+                    SHOP NOW
+                </a>
             </div>
+            <img src="/images/img-1.svg" class="image-right" alt="middle-img-2">
+        </section>
+</header>
 
-            <div class="col">
-                <div class="product-img">
-                    <div class="img">
-                        <img src="" alt="">
-                        <div class="product-menu">
-                            <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
-                        </div>
-                        <a class="btn-theme btn-product-theme" id="quick-view" href="#">
-                            QUICK VIEW
-                        </a>
-                    </div>
 
-                    <div class="product-body">
-                        <p class="product-category">Category</p>
-                        <h5 class="product-title">Modern Black Blouse</h5>
-                        <p class="product-rating">
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                        </p>
-                        <p class="product-price">$35.00</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="product-img">
-                    <div class="img">
-                        <img src="" alt="">
-                        <div class="product-menu">
-                            <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
-                        </div>
-                        <a class="btn-theme btn-product-theme" id="quick-view" href="#">
-                            QUICK VIEW
-                        </a>
-                    </div>
-
-                    <div class="product-body">
-                        <p class="product-category">Category</p>
-                        <h5 class="product-title">Modern Black Blouse</h5>
-                        <p class="product-rating">
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                        </p>
-                        <p class="product-price">$35.00</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="product-img">
-                    <div class="img">
-                        <img src="" alt="">
-                        <div class="product-menu">
-                            <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
-                        </div>
-                        <a class="btn-theme btn-product-theme" id="quick-view" href="#">
-                            QUICK VIEW
-                        </a>
-                    </div>
-
-                    <div class="product-body">
-                        <p class="product-category">Category</p>
-                        <h5 class="product-title">Modern Black Blouse</h5>
-                        <p class="product-rating">
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                        </p>
-                        <p class="product-price">$35.00</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="product-img">
-                    <div class="img">
-                        <img src="" alt="">
-                        <div class="product-menu">
-                            <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
-                        </div>
-                        <a class="btn-theme btn-product-theme" id="quick-view" href="#">
-                            QUICK VIEW
-                        </a>
-                    </div>
-
-                    <div class="product-body">
-                        <p class="product-category">Category</p>
-                        <h5 class="product-title">Modern Black Blouse</h5>
-                        <p class="product-rating">
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                        </p>
-                        <p class="product-price">$35.00</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="product-img">
-                    <div class="img">
-                        <img src="" alt="">
-                        <div class="product-menu">
-                            <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
-                        </div>
-                        <a class="btn-theme btn-product-theme" id="quick-view" href="#">
-                            QUICK VIEW
-                        </a>
-                    </div>
-
-                    <div class="product-body">
-                        <p class="product-category">Category</p>
-                        <h5 class="product-title">Modern Black Blouse</h5>
-                        <p class="product-rating">
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                        </p>
-                        <p class="product-price">$35.00</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="product-img">
-                    <div class="img">
-                        <img src="" alt="">
-                        <div class="product-menu">
-                            <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
-                        </div>
-                        <a class="btn-theme btn-product-theme" id="quick-view" href="#">
-                            QUICK VIEW
-                        </a>
-                    </div>
-
-                    <div class="product-body">
-                        <p class="product-category">Category</p>
-                        <h5 class="product-title">Modern Black Blouse</h5>
-                        <p class="product-rating">
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                        </p>
-                        <p class="product-price">$35.00</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="product-img">
-                    <div class="img">
-                        <img src="" alt="">
-                        <div class="product-menu">
-                            <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
-                        </div>
-                        <a class="btn-theme btn-product-theme" id="quick-view" href="#">
-                            QUICK VIEW
-                        </a>
-                    </div>
-
-                    <div class="product-body">
-                        <p class="product-category">Category</p>
-                        <h5 class="product-title">Modern Black Blouse</h5>
-                        <p class="product-rating">
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                        </p>
-                        <p class="product-price">$35.00</p>
-                    </div>
-                </div>
-            </div>
-
-</section>
+<partial name="Grid" />

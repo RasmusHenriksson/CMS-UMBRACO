@@ -2,23 +2,16 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Contact>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-    ViewData["Title"] = @Model.Value("contactTitle");
+    
 	Layout = "_Layout2.cshtml";
 }
 
 
- <section class="contact-section">
-    <div class="container">
-        <ul class="contact-list">
-            <a class ="not-active" href="index.html">Home</a>
-            >
-            <a class ="active" href="contact.html">Contacts</a>
-        </ul>
-    </div>
+
+<section class="map">
+<partial name="smallnavigation" />
+    <iframe class="google-map" src="@Model.Value("googleMapsUrl")" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 
-<partial name="Map" />
 <partial name="Form" />
 
-    </div>
-</section>

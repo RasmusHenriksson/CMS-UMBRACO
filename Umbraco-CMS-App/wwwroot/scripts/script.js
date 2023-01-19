@@ -1,4 +1,3 @@
 if (document.body.clientHeight < window.innerHeight)
-    dcoument.getElementById('footer').style.position = 'fixed'
-
-                        
+    document.getElementById('footer').style.position = 'fixed'
+          
