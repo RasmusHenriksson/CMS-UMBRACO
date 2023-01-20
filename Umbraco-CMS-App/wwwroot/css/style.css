@@ -47,9 +47,6 @@ a {
     background-color: #FF7373;
 }
 
-.header {
-    margin-bottom: 135px;
-}
 
 .Umbraco-btn {
     position: relative;
@@ -69,7 +66,12 @@ a {
         text-decoration: none;
 
     }
-
+    
+.featured {
+    display:block;
+    text-align:center;
+    
+}
 
 /*--------------------------------------------------------------- * NAVBAR CSS * -----------------------------------------------------------------------------------*/
 
@@ -77,6 +79,7 @@ a {
 .navbar-flex {
     display: flex;
 }
+
 
 
 .navbar .navbar-nav .nav-link {
@@ -202,6 +205,7 @@ a {
     max-width: 1110px;
 }
 
+
 #quick-view  {
     font-family: 'DM Serif Display', serif;
     font-weight: 300;
@@ -214,6 +218,7 @@ a {
 .product-img {
     border: none;
 }
+
 
 
 .product-img .img {
